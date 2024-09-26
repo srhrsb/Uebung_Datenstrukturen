@@ -24,7 +24,10 @@ public class EmployeeDAO {
                                 String employeeId, String job, int phone,
                                 int room, LocalDate hiringDate ){
 
-        return false;
+        Employee employee = new Employee( firstName, lastName, employeeId,
+                                          job, phone, room, hiringDate);
+
+        return employees.add( employee );
     }
 
 
