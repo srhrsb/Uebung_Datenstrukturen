@@ -30,7 +30,20 @@ public class EmployeeDAO {
         return employees.add( employee );
     }
 
+    /**
+     * Löscht den Mitarbeiter mit übergebender ID
+     * @param id
+     * @return
+     */
+    public boolean deleteEmployeeById( String id ){
 
+        for(Employee employee : employees){
+            if(employee.getEmployeeId().equals( id )){
+                return employees.remove(employee);
+            }
+        }
+        return false;
+    }
 
 
 
