@@ -45,6 +45,49 @@ public class EmployeeDAO {
         return false;
     }
 
+    /**
+     * Löscht die komplette Liste der Mitarbeiter
+     * @return Erfolgsmeldung
+     */
+    public boolean deleteAll(){
+        employees.clear();
+        return true;
+    }
+
+    /**
+     * Löscht die gegeben Mitarbeiter
+     * @return Erfolgsmeldung
+     */
+    public boolean deleteByList( ArrayList<Employee> collection ){
+        employees.removeAll(collection);
+        return true;
+    }
+
+    /**
+     * Gibt den Mitarbeiter mit der gegebenen ID zurück
+     * @param id ID des Mitarbeiters
+     * @return Mitarbeiter
+     */
+    public Employee getEmployeeById( String id){
+
+        for(Employee employee : employees){
+            if(employee.getEmployeeId().equals( id ))
+                return employee;
+
+        }
+
+        return null;
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
