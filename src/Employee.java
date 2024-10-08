@@ -8,10 +8,11 @@ public class Employee {
      private int phone;
      private int room;
      private LocalDate hiringDate;
+     private EmploymentType type;
 
     public Employee(String firstName, String lastName,
                     String employeeId, String job, int phone,
-                    int room, LocalDate hiringDate) {
+                    int room, LocalDate hiringDate, EmploymentType type) {
 
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,6 +21,15 @@ public class Employee {
         this.phone = phone;
         this.room = room;
         this.hiringDate = hiringDate;
+        this.type = type;
+    }
+
+    public EmploymentType getType() {
+        return type;
+    }
+
+    public void setType(EmploymentType type) {
+        this.type = type;
     }
 
     public String getFirstName() {
