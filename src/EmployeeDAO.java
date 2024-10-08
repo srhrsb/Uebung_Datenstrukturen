@@ -22,10 +22,10 @@ public class EmployeeDAO {
      */
     public boolean addEmployee( String firstName, String lastName,
                                 String employeeId, String job, int phone,
-                                int room, LocalDate hiringDate ){
+                                int room, LocalDate hiringDate, EmploymentType type ){
 
         Employee employee = new Employee( firstName, lastName, employeeId,
-                                          job, phone, room, hiringDate);
+                                          job, phone, room, hiringDate, type);
 
         return employees.add( employee );
     }
